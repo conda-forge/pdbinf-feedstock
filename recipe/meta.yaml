@@ -1,5 +1,5 @@
 {% set name = "pdbinf" %}
-{% set version = "0.0.3" %}
+{% set version = "0.0.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pdbinf-{{ version }}.tar.gz
-  sha256: 346fad612a6829c1e6d5c8c5fae2875287fc298817a5d1e4ed519efcf821b688
+  sha256: 5d98288961664f8ac87eabd76bcdb33c7dad3ed3f54a4d2347fb86258595322c
 
 build:
   noarch: python
