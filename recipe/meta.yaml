@@ -1,13 +1,14 @@
 {% set name = "pdbinf" %}
-{% set version = "0.0.4" %}
+{% set version = "0.0.5" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pdbinf-{{ version }}.tar.gz
-  sha256: 5d98288961664f8ac87eabd76bcdb33c7dad3ed3f54a4d2347fb86258595322c
+  git_url: https://github.com/OpenFreeEnergy/{{ name }}.git
+  git_rev: v{{ version }}
+  git_depth: -1
 
 build:
   noarch: python
