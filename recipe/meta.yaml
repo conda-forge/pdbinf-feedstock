@@ -13,20 +13,22 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools >=61.0
     - pip
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - rdkit
     - gemmi
     - numpy
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pdbinf
 
